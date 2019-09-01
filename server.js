@@ -18,9 +18,6 @@ var server = http.createServer(function(request, response) {
   var path = parsedUrl.pathname;
   var query = parsedUrl.query;
   var method = request.method;
-
-  /******** 从这里开始看，上面不要看 ************/
-
   console.log("你爹来找你了，路径（带查询参数）为：" + pathWithQuery);
 
   if (path === "/") {
@@ -58,8 +55,6 @@ var server = http.createServer(function(request, response) {
     response.write(`你输入的路径不存在对应的内容`);
     response.end();
   }
-
-  /******** 代码结束，下面不要看 ************/
 });
 server.listen(port);
 console.log(
